@@ -7,13 +7,18 @@ import java.util.Scanner;
 
 public class Practice5 {
     public static void main(String[] args) {
-       new Task1().run();
+        new Task1().run();
         new Task2().run();
         new Task3().run();
          new Task4().run();
          new Task5().run();
          new Task6().run();
          new Task7().run();
+       new Task8().run();
+         new Task9().run();
+         new Task10().run();
+         new Task11().run();
+         new Task12().run();
 
     }
 }
@@ -170,8 +175,83 @@ class Task7{ // За семь попыток угадать число. При �
         if (success!= true){
             System.out.println("Не угадал");
         }
-
     }}
+
+class Task8{ // Вывести на экран числа от 1 до 10, используя цикл while.
+    public void run(){
+        int i = 0;
+        while (i<=10) {
+            System.out.println(i);
+            i++;
+        }
+
+    }
+}
+class Task9{ // Вывести на экран числа от 10 до 1, используя цикл while.
+    public void run(){
+        int i =10;
+        while (i>=1) {
+            System.out.println(i);
+            i--;
+        }}
+}
+class Task10{ // Ввести с клавиатуры строку и число N. Вывести на экран строку N раз, используя цикл while.
+    // Пример ввода: абв 2 Пример вывода: абв абв
+    public void run(){
+
+  int number;
+  String line ;
+  Scanner s = new Scanner(System.in);
+
+  System.out.println("Enter any line:");
+      line = s.nextLine();
+
+  System.out.println("Enter number:");
+        number = s.nextInt();
+
+        int i=0;
+        while (i<number) {
+      System.out.println(line);
+      i++;
+  }}
+}
+
+class Task11{  // Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
+    public void run(){
+
+        char letter = 'S';
+        int length =10;
+        int height =10;
+
+        int i=0;
+        while (i<height){
+            int a=0;
+                while (a<length){
+                    System.out.print(letter);
+                    a++;
+                }
+                System.out.println();
+                i++;
+            }}
+    }
+class Task12{ // Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
+    public void run(){
+
+        int i =1;
+        while (i<=10) {
+            int a =1;
+
+            while (a<=10) {
+
+                System.out.print(i * a + " ");
+                a++;
+
+            }
+            System.out.println();
+            i++;
+            }
+        }
+    }
 
 
 
