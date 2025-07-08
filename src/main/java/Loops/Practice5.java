@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Practice5 {
-    public static void main(String[] args) {
-        new Task1().run();
+    public static void main(String[] args) throws InterruptedException {
+       new Task1().run();
         new Task2().run();
         new Task3().run();
          new Task4().run();
@@ -15,10 +15,16 @@ public class Practice5 {
          new Task6().run();
          new Task7().run();
        new Task8().run();
-         new Task9().run();
+        new Task9().run();
          new Task10().run();
-         new Task11().run();
-         new Task12().run();
+        new Task11().run();
+        new Task12().run();
+        new Task13().run();
+        new Task14().run();
+          new Task15().run();
+        // new Task16().run(); СПРОСИТЬ КАК ДОДЕЛАТЬ
+        new Task17().run();
+        new Task18().run();
 
     }
 }
@@ -245,13 +251,85 @@ class Task12{ // Вывести на экран таблицу умножени�
 
                 System.out.print(i * a + " ");
                 a++;
-
             }
             System.out.println();
             i++;
             }
         }
     }
+ class Task13{
+    public void run() {
+        for (int i = 2; i<=100; i+=2) {
+            System.out.println(i);
+        }}
+ }
 
+class Task14{ // Ввести с клавиатуры два числа m и n.
+    // Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок.
+
+    public void run() {
+
+        int m = 3; // высота
+        int n = 5; // длина строки
+
+        for (int i=0; i<m;i++) {
+        for (int a=0; a<n; a++){
+            System.out.print(8);
+        }
+        System.out.println();
+        }}
+}
+
+class Task15{ //Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
+    public void run() {
+
+   // i - высота, a - длина строки
+        for (int i=1; i<=10;i++) {
+            for (int a=1; a<i+1; a++){
+                System.out.print(8);
+    }
+            System.out.println();
+        }}
+}
+
+class Task16{ //Используя цикл for вывести на экран:  горизонтальную линию из 10 восьмёрок
+    //вертикальную линию из 10 восьмёрок.
+    public void run() {
+// i - высота, a - длина строки
+        for (int i=1; i<=10;i++) {
+            System.out.print(8);}
+        System.out.println();
+            for (int a=1; a<=10; a++) {
+                System.out.print(8);
+            }}
+} // Не получилось
+
+class Task17{ //Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
+    public void run() {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter name: ");
+        String name;
+        name = s.nextLine();
+
+            for (int a =0; a<=10;a++) {
+           System.out.println(name + " любит меня");
+            }
+        }}
+
+class Task18{ // Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!».
+    // Программа должна уменьшать число 10 раз в секунду.
+    // Для того чтобы вставить в программу задержку, воспользуйся функцией: Thread.sleep(100); //задержка на одну десятую секунды.
+    public void run() throws InterruptedException {
+
+        for (int i=30; i>=0;i--) {
+            System.out.println(i);
+            Thread.sleep(100);
+        }
+        System.out.println("Бум!");
+
+    }
+}
 
 
