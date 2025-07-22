@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Practice5 {
     public static void main(String[] args) throws InterruptedException {
-       new Task1().run();
+           new Task1().run();
         new Task2().run();
         new Task3().run();
          new Task4().run();
@@ -22,9 +22,13 @@ public class Practice5 {
         new Task13().run();
         new Task14().run();
           new Task15().run();
-        // new Task16().run(); СПРОСИТЬ КАК ДОДЕЛАТЬ
+         new Task16().run();
         new Task17().run();
         new Task18().run();
+        new Task19().run();
+      new Task20().run();
+        new Task21().run();
+         new Task22().run();
 
     }
 }
@@ -190,7 +194,6 @@ class Task8{ // Вывести на экран числа от 1 до 10, исп
             System.out.println(i);
             i++;
         }
-
     }
 }
 class Task9{ // Вывести на экран числа от 10 до 1, используя цикл while.
@@ -268,15 +271,19 @@ class Task14{ // Ввести с клавиатуры два числа m и n.
     // Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок.
 
     public void run() {
+        Scanner s = new Scanner(System.in);
 
-        int m = 3; // высота
-        int n = 5; // длина строки
+        System.out.println("Enter number of lines:m");
+        int m = s.nextInt();
+        System.out.println("Enter number of columns:n");
+        int n = s.nextInt();
 
         for (int i=0; i<m;i++) {
         for (int a=0; a<n; a++){
             System.out.print(8);
         }
         System.out.println();
+        s.close();
         }}
 }
 
@@ -285,7 +292,7 @@ class Task15{ //Используя цикл for вывести на экран �
 
    // i - высота, a - длина строки
         for (int i=1; i<=10;i++) {
-            for (int a=1; a<i+1; a++){
+            for (int a=1; a<=i; a++){
                 System.out.print(8);
     }
             System.out.println();
@@ -297,12 +304,12 @@ class Task16{ //Используя цикл for вывести на экран: 
     public void run() {
 // i - высота, a - длина строки
         for (int i=1; i<=10;i++) {
-            System.out.print(8);}
+            System.out.print("8 ");}
         System.out.println();
-            for (int a=1; a<=10; a++) {
-                System.out.print(8);
+            for (int a=1; a<10; a++) {
+                System.out.println(8);
             }}
-} // Не получилось
+}
 
 class Task17{ //Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
     public void run() {
@@ -331,5 +338,115 @@ class Task18{ // Написать программу, которая ведёт 
 
     }
 }
+
+class Task19 { // треугольник наoборот по спаданию
+
+    public void run() {
+        for (int i = 10; i >= 1; i--) {
+            for (int a = 1; a <= i; a++) {
+                System.out.print(8);
+            }
+            System.out.println();
+
+        }
+    }}
+
+class Task20 { // Пользователь вводит число от 1 до 4. Нужно вывести соответствующую часть суток
+    public void run() {
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter number 1 - 4: ");
+
+        int timeOfDay;
+        timeOfDay = s.nextInt();
+
+        String timeOfDayString;
+
+        switch (timeOfDay) {
+
+            case 1: timeOfDayString = "Утро";
+            break;
+
+            case 2: timeOfDayString = "День";
+                break;
+
+            case 3: timeOfDayString = "Вечер";
+                break;
+
+            case 4: timeOfDayString = "Ночь";
+                break;
+
+            default: timeOfDayString ="Неверно введено число";
+
+        }
+        System.out.println(timeOfDayString);
+        }
+    }
+
+    class Task21 { // Пользователь вводит число от 1 до 12. Программа выводит название месяца.
+        public void run() {
+
+            Scanner s = new Scanner(System.in);
+            System.out.println("Enter number 1 - 12: ");
+
+            int month;
+            month = s.nextInt();
+
+            String monthString;
+
+            switch (month) {
+
+                case 1: monthString = "Декабрь";
+                break;
+
+                case 2: monthString = "Январь";
+                    break;
+
+                case 3: monthString = "Февраль";
+                    break;
+
+                case 4: monthString = "Март";
+                    break;
+
+                case 5: monthString = "Апрель";
+                    break;
+                case 6: monthString = "Май";
+                    break;
+
+                case 7: monthString = "Июнь";
+                    break;
+
+                case 8: monthString = "Июль";
+                    break;
+
+                case 9: monthString = "Август";
+                    break;
+
+                case 10: monthString = "Сентябрь";
+                    break;
+
+                case 11: monthString = "Октябрь";
+                    break;
+
+                case 12: monthString = "Ноябрь";
+                    break;
+
+                default: monthString = "Неверно введено число";
+            }
+            System.out.println(monthString);
+        }
+        }
+
+        class Task22 { // таблиц умножения через for
+            public void run() {
+
+                for (int i =1; i<=10; i++) {
+                    for (int a =1; a<=10; a++){
+                        System.out.print(i*a + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
 
 
