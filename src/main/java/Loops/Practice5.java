@@ -6,14 +6,29 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Practice5 {
-    public static void main(String[] args) {
-       new Task1().run();
+    public static void main(String[] args) throws InterruptedException {
+           new Task1().run();
         new Task2().run();
         new Task3().run();
          new Task4().run();
          new Task5().run();
          new Task6().run();
          new Task7().run();
+       new Task8().run();
+        new Task9().run();
+         new Task10().run();
+        new Task11().run();
+        new Task12().run();
+        new Task13().run();
+        new Task14().run();
+          new Task15().run();
+         new Task16().run();
+        new Task17().run();
+        new Task18().run();
+        new Task19().run();
+      new Task20().run();
+        new Task21().run();
+         new Task22().run();
 
     }
 }
@@ -170,8 +185,268 @@ class Task7{ // За семь попыток угадать число. При �
         if (success!= true){
             System.out.println("Не угадал");
         }
-
     }}
 
+class Task8{ // Вывести на экран числа от 1 до 10, используя цикл while.
+    public void run(){
+        int i = 0;
+        while (i<=10) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+class Task9{ // Вывести на экран числа от 10 до 1, используя цикл while.
+    public void run(){
+        int i =10;
+        while (i>=1) {
+            System.out.println(i);
+            i--;
+        }}
+}
+class Task10{ // Ввести с клавиатуры строку и число N. Вывести на экран строку N раз, используя цикл while.
+    // Пример ввода: абв 2 Пример вывода: абв абв
+    public void run(){
+
+  int number;
+  String line ;
+  Scanner s = new Scanner(System.in);
+
+  System.out.println("Enter any line:");
+      line = s.nextLine();
+
+  System.out.println("Enter number:");
+        number = s.nextInt();
+
+        int i=0;
+        while (i<number) {
+      System.out.println(line);
+      i++;
+  }}
+}
+
+class Task11{  // Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
+    public void run(){
+
+        char letter = 'S';
+        int length =10;
+        int height =10;
+
+        int i=0;
+        while (i<height){
+            int a=0;
+                while (a<length){
+                    System.out.print(letter);
+                    a++;
+                }
+                System.out.println();
+                i++;
+            }}
+    }
+class Task12{ // Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
+    public void run(){
+
+        int i =1;
+        while (i<=10) {
+            int a =1;
+
+            while (a<=10) {
+
+                System.out.print(i * a + " ");
+                a++;
+            }
+            System.out.println();
+            i++;
+            }
+        }
+    }
+ class Task13{
+    public void run() {
+        for (int i = 2; i<=100; i+=2) {
+            System.out.println(i);
+        }}
+ }
+
+class Task14{ // Ввести с клавиатуры два числа m и n.
+    // Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок.
+
+    public void run() {
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter number of lines:m");
+        int m = s.nextInt();
+        System.out.println("Enter number of columns:n");
+        int n = s.nextInt();
+
+        for (int i=0; i<m;i++) {
+        for (int a=0; a<n; a++){
+            System.out.print(8);
+        }
+        System.out.println();
+        s.close();
+        }}
+}
+
+class Task15{ //Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
+    public void run() {
+
+   // i - высота, a - длина строки
+        for (int i=1; i<=10;i++) {
+            for (int a=1; a<=i; a++){
+                System.out.print(8);
+    }
+            System.out.println();
+        }}
+}
+
+class Task16{ //Используя цикл for вывести на экран:  горизонтальную линию из 10 восьмёрок
+    //вертикальную линию из 10 восьмёрок.
+    public void run() {
+// i - высота, a - длина строки
+        for (int i=1; i<=10;i++) {
+            System.out.print("8 ");}
+        System.out.println();
+            for (int a=1; a<10; a++) {
+                System.out.println(8);
+            }}
+}
+
+class Task17{ //Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
+    public void run() {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter name: ");
+        String name;
+        name = s.nextLine();
+
+            for (int a =0; a<=10;a++) {
+           System.out.println(name + " любит меня");
+            }
+        }}
+
+class Task18{ // Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!».
+    // Программа должна уменьшать число 10 раз в секунду.
+    // Для того чтобы вставить в программу задержку, воспользуйся функцией: Thread.sleep(100); //задержка на одну десятую секунды.
+    public void run() throws InterruptedException {
+
+        for (int i=30; i>=0;i--) {
+            System.out.println(i);
+            Thread.sleep(100);
+        }
+        System.out.println("Бум!");
+
+    }
+}
+
+class Task19 { // треугольник наoборот по спаданию
+
+    public void run() {
+        for (int i = 10; i >= 1; i--) {
+            for (int a = 1; a <= i; a++) {
+                System.out.print(8);
+            }
+            System.out.println();
+
+        }
+    }}
+
+class Task20 { // Пользователь вводит число от 1 до 4. Нужно вывести соответствующую часть суток
+    public void run() {
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter number 1 - 4: ");
+
+        int timeOfDay;
+        timeOfDay = s.nextInt();
+
+        String timeOfDayString;
+
+        switch (timeOfDay) {
+
+            case 1: timeOfDayString = "Утро";
+            break;
+
+            case 2: timeOfDayString = "День";
+                break;
+
+            case 3: timeOfDayString = "Вечер";
+                break;
+
+            case 4: timeOfDayString = "Ночь";
+                break;
+
+            default: timeOfDayString ="Неверно введено число";
+
+        }
+        System.out.println(timeOfDayString);
+        }
+    }
+
+    class Task21 { // Пользователь вводит число от 1 до 12. Программа выводит название месяца.
+        public void run() {
+
+            Scanner s = new Scanner(System.in);
+            System.out.println("Enter number 1 - 12: ");
+
+            int month;
+            month = s.nextInt();
+
+            String monthString;
+
+            switch (month) {
+
+                case 1: monthString = "Декабрь";
+                break;
+
+                case 2: monthString = "Январь";
+                    break;
+
+                case 3: monthString = "Февраль";
+                    break;
+
+                case 4: monthString = "Март";
+                    break;
+
+                case 5: monthString = "Апрель";
+                    break;
+                case 6: monthString = "Май";
+                    break;
+
+                case 7: monthString = "Июнь";
+                    break;
+
+                case 8: monthString = "Июль";
+                    break;
+
+                case 9: monthString = "Август";
+                    break;
+
+                case 10: monthString = "Сентябрь";
+                    break;
+
+                case 11: monthString = "Октябрь";
+                    break;
+
+                case 12: monthString = "Ноябрь";
+                    break;
+
+                default: monthString = "Неверно введено число";
+            }
+            System.out.println(monthString);
+        }
+        }
+
+        class Task22 { // таблиц умножения через for
+            public void run() {
+
+                for (int i =1; i<=10; i++) {
+                    for (int a =1; a<=10; a++){
+                        System.out.print(i*a + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
 
 

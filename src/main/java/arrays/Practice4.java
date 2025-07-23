@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class Practice4 {
     public static void main(String[] args) {
-        new Task1().run();
-        new Task2().run();
-        new Task3().run();
-        new Task4().run();
-        new Task5().run();
+     //   new Task1().run();
+       // new Task2().run();
+        //new Task3().run();
+        //new Task4().run();
+        //new Task5().run();
+       // new Task6().run();
+        new Task7().run();
     }
 }
 
@@ -114,5 +116,56 @@ public class Practice4 {
         for (int number : small2) {
             System.out.println(number);
         }
+    }
+}
+
+class Task6 { // через  for
+    public void run() {
+        int[] big = new int[20];
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter 20 numbers: ");
+        for (int i = 0; i < big.length; i++) {
+            big[i] = s.nextInt();
+        }
+
+        int[] small1 = new int[10];
+        int[] small2 = new int[10];
+
+        for (int i =0; i <10; i++) {
+            small1[i] = big[i];
+            small2[i] = big[i +10];
+        }
+
+        System.out.println("Second small array: ");
+        for (int number : small2) {
+            System.out.println(number);
+        }
+    }
+}
+
+class Task7{ // через if
+    public void run() {
+        int[] big = new int[20];
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter 20 numbers: ");
+        for (int i = 0; i < big.length; i++) {
+            big[i] = s.nextInt();
+        }
+        int[] small1 = new int[10];
+        int[] small2 = new int[10];
+
+        for (int i=0; i<20; i++){
+            if (i<10){
+                small1[i] =big[i];
+            }
+             else if (i>10) {
+                small2[i-10] =big[i];
+            }
+        }
+        System.out.println("Second small array: ");
+        for (int number : small2) {
+            System.out.println(number);
+        }
+
     }
 }
